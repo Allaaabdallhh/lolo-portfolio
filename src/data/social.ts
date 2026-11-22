@@ -12,7 +12,7 @@ const channels = [
   { label: "TikTok", icon: "tiktok", url: process.env.LOLO_PREVIEW_TIKTOK },
   {
     label: "Facebook",
-    icon: "facebook",
+    icon: "facebook-f",
     url: process.env.LOLO_PREVIEW_FACEBOOK,
   },
 ]
