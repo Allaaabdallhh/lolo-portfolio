@@ -1,0 +1,556 @@
+.lolo-body {
+  --lolo-gold: #e4b875;
+  --lolo-bronze-edge: rgb(228 184 117 / 34%);
+}
+
+.lolo-navy-hero .lolo-composition {
+  isolation: isolate;
+}
+.lolo-navy-hero .lolo-aura {
+  background: radial-gradient(
+    ellipse at 50% 58%,
+    #36231f,
+    #160f14 50%,
+    transparent 76%
+  );
+}
+.lolo-portrait-halo {
+  position: absolute;
+  inset: 10% 0 4%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 22% 66% at 50% 56%,
+    rgb(255 126 47 / 19%),
+    transparent 74%
+  );
+}
+.lolo-portrait-halo::before {
+  content: "";
+  position: absolute;
+  inset: 6% 38% 11%;
+  border: 1px solid rgb(228 184 117 / 25%);
+  border-bottom-color: transparent;
+  border-radius: 52% 52% 42% 42%;
+  mask-image: linear-gradient(black 15%, transparent 80%);
+}
+.lolo-navy-hero .lolo-portrait {
+  height: 91%;
+}
+.lolo-navy-hero .lolo-portrait img {
+  filter: none;
+  mask-image: linear-gradient(#000 84%, transparent 99%);
+}
+.lolo-navy-hero .lolo-portrait-inner {
+  filter: drop-shadow(0.08rem 0 0.14rem rgb(249 159 84 / 53%))
+    drop-shadow(0 0.65rem 0.95rem #08080a);
+}
+.lolo-navy-hero .lolo-name-outline {
+  opacity: 0.8;
+  clip-path: inset(0 40.8% 0 42.5%);
+  -webkit-text-stroke: 1px rgb(245 167 87 / 56%);
+}
+.lolo-navy-hero .lolo-greeting {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.34em;
+  align-items: baseline;
+  font-size: clamp(1.12rem, 3.15vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+.lolo-navy-hero .lolo-greeting strong {
+  color: var(--lolo-gold);
+}
+.lolo-navy-hero .lolo-profile-panel {
+  border-color: var(--lolo-bronze-edge);
+  background: linear-gradient(140deg, #211916, #121013 70%);
+  box-shadow:
+    inset 0 0 0 4px #ffffff05,
+    0 10px 32px #0007;
+}
+.lolo-navy-hero .lolo-hero-profile-location {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.65rem 0;
+  color: #c7b3a7;
+  font-size: 0.78rem;
+}
+.lolo-hero-profile-location svg {
+  color: var(--lolo-gold);
+}
+.lolo-navy-hero .lolo-hero-actions a:last-child {
+  color: var(--lolo-bg);
+  background: var(--lolo-gold);
+  border-color: var(--lolo-gold);
+}
+.lolo-navy-hero .lolo-hero-actions a:last-child:hover {
+  background: var(--lolo-orange-hover);
+  border-color: var(--lolo-orange-hover);
+}
+
+.lolo-editorial-about {
+  background:
+    radial-gradient(ellipse at 9% 51%, #301912, transparent 55%), #0e0b0d;
+}
+.lolo-editorial-about .lolo-editorial-portrait {
+  padding: 0.6rem;
+  border-color: var(--lolo-bronze-edge);
+  background: #211814;
+  outline-color: rgb(228 184 117 / 15%);
+}
+.lolo-editorial-about .lolo-editorial-portrait img {
+  object-position: center 52%;
+}
+.lolo-editorial-about .lolo-biography {
+  background: linear-gradient(135deg, #271b15, #131013 74%);
+}
+.lolo-about-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+.lolo-about-facts li {
+  display: flex;
+  align-items: center;
+  gap: 0.48rem;
+  min-width: 0;
+  padding: 0.55rem;
+  border: 1px solid var(--lolo-line);
+  color: #e4d5c6;
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+.lolo-about-facts li::before {
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  flex: none;
+  background: var(--lolo-gold);
+  rotate: 45deg;
+}
+
+.lolo-skill-library {
+  --work-accent: var(--lolo-gold);
+  background:
+    radial-gradient(ellipse at 68% 30%, #221813, transparent 65%),
+    var(--lolo-bg);
+}
+.lolo-skill-catalog {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 1.6rem 1rem;
+}
+.lolo-skill-category {
+  min-width: 0;
+  border-block-start: 1px solid var(--lolo-bronze-edge);
+  padding-top: 0.8rem;
+}
+.lolo-skill-category h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.7rem;
+  color: var(--lolo-gold);
+  font-weight: 690;
+}
+.lolo-skill-category h3 svg {
+  flex: none;
+}
+.lolo-skill-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.55rem;
+}
+.lolo-skill-category[data-group="systems"] .lolo-skill-tiles {
+  grid-template-columns: minmax(0, 1fr);
+}
+.lolo-skill-card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid rgb(228 184 117 / 22%);
+  border-radius: 0.35rem;
+  background: #171313;
+  box-shadow:
+    inset 0 0 0 3px rgb(255 238 215 / 2%),
+    0 8px 22px rgb(0 0 0 / 18%);
+}
+.lolo-skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    circle at var(--spot-x, 90%) var(--spot-y, 0%),
+    #e4b87529,
+    transparent 10rem
+  );
+}
+.lolo-skill-card:is(:hover, :focus-within, [open]) {
+  border-color: var(--lolo-bronze-edge);
+}
+.lolo-skill-card:is(:hover, :focus-within)::before {
+  opacity: 1;
+}
+.lolo-skill-card summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 88px;
+  padding: 0.65rem;
+  cursor: pointer;
+  list-style: none;
+}
+.lolo-skill-card summary::-webkit-details-marker {
+  display: none;
+}
+.lolo-skill-icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--lolo-bronze-edge);
+  border-radius: 0.32rem;
+  color: var(--lolo-gold);
+  background: #191311;
+}
+.lolo-skill-name {
+  display: grid;
+  gap: 0.22rem;
+}
+.lolo-skill-name strong {
+  font-size: clamp(0.86rem, 1.3vw, 1.05rem);
+  line-height: 1.23;
+  overflow-wrap: anywhere;
+}
+.lolo-skill-name small {
+  color: #bfae9f;
+  font-size: 0.7rem;
+}
+.lolo-skill-chevron {
+  color: var(--lolo-gold);
+}
+.lolo-skill-card[open] .lolo-skill-chevron {
+  rotate: 180deg;
+}
+.lolo-skill-card > p {
+  margin: 0 0.65rem;
+  padding: 0.68rem 0;
+  border-top: 1px solid var(--lolo-line);
+  color: #d6c4b8;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+.lolo-skill-library .lolo-toolbox-bridge {
+  margin-top: 1.05rem;
+}
+
+.lolo-projects-signature {
+  --work-accent: var(--lolo-gold);
+  background:
+    radial-gradient(ellipse at 21% 45%, #242018, transparent 64%),
+    var(--lolo-bg);
+}
+.lolo-projects-signature .lolo-project-feature {
+  position: relative;
+  overflow: clip;
+  padding: clamp(0.85rem, 2vw, 1.9rem);
+  border-color: var(--lolo-bronze-edge);
+  background: linear-gradient(140deg, #261b16, #101015 65%);
+  box-shadow:
+    inset 0 0 0 4px #ffffff05,
+    0 22px 58px #0007;
+}
+.lolo-projects-signature .lolo-project-art {
+  border-color: var(--lolo-bronze-edge);
+}
+.lolo-projects-signature .lolo-project-art figcaption {
+  border-color: var(--lolo-bronze-edge);
+  background: #181413;
+}
+.lolo-project-type {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.lolo-project-type > span {
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--lolo-bronze-edge);
+  color: var(--lolo-gold);
+}
+.lolo-projects-signature .lolo-project-copy .lolo-project-role-label {
+  margin-top: 1.2rem;
+  color: var(--lolo-gold);
+  font-size: 0.77rem;
+  font-weight: 720;
+}
+.lolo-projects-signature .lolo-project-copy .lolo-cv {
+  background: var(--lolo-gold);
+  color: var(--lolo-bg);
+  border-color: var(--lolo-gold);
+}
+.lolo-projects-signature .lolo-project-copy .lolo-cv:hover {
+  background: var(--lolo-orange-hover);
+}
+
+.lolo-footer-endframe {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  overflow: clip;
+  min-height: clamp(21rem, 36vw, 31rem);
+  padding: clamp(1.5rem, 5vw, 4.5rem);
+  border: 1px solid var(--lolo-bronze-edge);
+  border-radius: 0.4rem;
+  background: radial-gradient(
+    ellipse at 50% 44%,
+    #3a2317,
+    #15100f 60%,
+    #0c0b0e 82%
+  );
+  text-align: center;
+}
+.lolo-footer-endframe::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0.45rem;
+  border: 1px solid rgb(228 184 117 / 18%);
+  border-radius: 0.2rem;
+  pointer-events: none;
+}
+.lolo-footer-endframe .lolo-footer-brand {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 36rem);
+  margin-inline: auto;
+}
+.lolo-footer-endframe .lolo-signature-mark {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  justify-content: center;
+  width: min(100%, 25rem);
+  min-height: 0;
+  padding: clamp(1.15rem, 3vw, 2.65rem);
+  border: 1px solid #d09858;
+  background: linear-gradient(135deg, #281c17, #110e10);
+  box-shadow:
+    inset 0 0 0 4px #e4b87515,
+    0 10px 36px #0a0707a3;
+}
+.lolo-footer-endframe .lolo-signature-mark img {
+  width: min(100%, 16rem);
+}
+.lolo-footer-endframe .lolo-signature-mark::after,
+.lolo-projects-signature .lolo-project-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    #f8c68430 50%,
+    transparent 60%
+  );
+  translate: -100% 0;
+}
+.lolo-footer-endframe .lolo-footer-brand h2 {
+  margin-top: 1.1rem;
+  font-size: clamp(1.65rem, 4.1vw, 3.7rem);
+}
+.lolo-footer-portrait {
+  position: absolute;
+  inset: auto 4% 0 auto;
+  display: block;
+  width: auto;
+  height: min(92%, 26rem);
+  max-width: 23%;
+  object-fit: contain;
+  object-position: bottom;
+  mask-image: linear-gradient(black 76%, transparent);
+  filter: drop-shadow(0 0 0.8rem #d7af6450);
+}
+.lolo-footer .lolo-footer-contact {
+  display: grid;
+  justify-items: center;
+  padding-block: 1.1rem;
+}
+.lolo-footer .lolo-contact-lines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1rem;
+  margin: 0;
+}
+.lolo-built-stack {
+  margin-block: 0.8rem 1.45rem;
+}
+.lolo-built-stack h3 {
+  margin-bottom: 0.55rem;
+  color: var(--lolo-gold);
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.lolo-built-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.52rem;
+  padding: 0.7rem 0.6rem;
+  border-block: 1px solid var(--lolo-bronze-edge);
+}
+.lolo-built-stack li {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  min-height: 2.3rem;
+  padding-inline: 0.55rem;
+  color: #ded3c7;
+  font-size: 0.78rem;
+}
+.lolo-built-stack img {
+  object-fit: contain;
+}
+
+@media (max-width: 59.99rem) {
+  .lolo-navy-hero .lolo-composition {
+    --hero-media-bottom: clamp(23rem, 61svh, 38rem);
+    --hero-media-top: clamp(8.8rem, 24vw, 12.7rem);
+  }
+  .lolo-navy-hero .lolo-portrait {
+    top: var(--hero-media-top);
+    height: min(
+      clamp(12rem, calc(59svh - 8.2rem), 25rem),
+      calc(var(--hero-media-bottom) - var(--hero-media-top) - 0.6rem)
+    );
+  }
+  .lolo-portrait-halo {
+    inset: 0 0 auto;
+    height: clamp(23rem, 61svh, 38rem);
+  }
+  .lolo-portrait-halo::before {
+    inset-inline: 27%;
+  }
+  .lolo-footer-endframe .lolo-footer-brand {
+    max-width: 27rem;
+  }
+  .lolo-footer-portrait {
+    inset-inline-end: 2%;
+    max-width: 20%;
+  }
+}
+@media (max-width: 47.99rem) {
+  .lolo-navy-hero .lolo-greeting {
+    font-size: clamp(1.5rem, 5.75vw, 2.2rem);
+  }
+  .lolo-skill-catalog {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lolo-footer-endframe {
+    align-items: end;
+    padding: 1.4rem 0.85rem;
+  }
+  .lolo-footer-endframe[data-portrait="true"] {
+    padding-top: 12.3rem;
+  }
+  .lolo-footer-portrait {
+    inset: 0.55rem auto auto 50%;
+    translate: -50% 0;
+    height: 13rem;
+    max-width: 60%;
+  }
+}
+@media (max-width: 31rem) {
+  .lolo-skill-card summary {
+    min-height: 92px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.4rem;
+  }
+  .lolo-skill-icon {
+    grid-column: 1 / -1;
+    width: 2.65rem;
+    height: 2.65rem;
+  }
+  .lolo-skill-category[data-group="systems"] summary {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  .lolo-skill-category[data-group="systems"] .lolo-skill-icon {
+    grid-column: auto;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lolo-skill-card,
+  .lolo-skill-card::before,
+  .lolo-signature-mark {
+    transition:
+      transform 250ms var(--lolo-ease),
+      border-color 250ms ease,
+      opacity 250ms ease;
+  }
+  .lolo-signature-mark:is(:hover, :focus-visible) {
+    transform: translateY(-2px);
+    border-color: var(--lolo-gold);
+  }
+  .lolo-signature-mark:is(:hover, :focus-visible)::after,
+  .lolo-project-feature:focus-within::after {
+    animation: lolo-signature-sweep 700ms ease-out both;
+  }
+  @supports (animation-timeline: view()) {
+    .lolo-skill-card,
+    .lolo-editorial-about .lolo-editorial-portrait,
+    .lolo-editorial-about .lolo-biography,
+    .lolo-footer-endframe .lolo-signature-mark,
+    .lolo-built-stack {
+      animation: lolo-signature-enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+    .lolo-skill-card:nth-child(even),
+    .lolo-editorial-about .lolo-biography {
+      animation-range: entry 8% entry 65%;
+    }
+    .lolo-footer-endframe .lolo-signature-mark::after {
+      animation: lolo-signature-sweep linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+    .lolo-footer-endframe
+      .lolo-signature-mark:is(:hover, :focus-visible)::after {
+      animation: lolo-signature-sweep 700ms ease-out both;
+    }
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .lolo-skill-card:hover {
+    transform: translateY(-3px);
+  }
+  .lolo-projects-signature .lolo-project-feature:hover::after {
+    animation: lolo-signature-sweep 780ms ease-out both;
+  }
+}
+@keyframes lolo-signature-sweep {
+  to {
+    translate: 100% 0;
+  }
+}
+@keyframes lolo-signature-enter {
+  from {
+    opacity: 0.76;
+    translate: 0 11px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

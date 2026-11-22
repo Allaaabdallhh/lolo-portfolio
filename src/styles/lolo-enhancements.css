@@ -1,0 +1,594 @@
+.lolo-loader-content {
+  background: radial-gradient(
+    ellipse 29% 36% at 50% 45%,
+    rgb(255 106 31 / 8%),
+    transparent 85%
+  );
+}
+
+.lolo-loader-mask {
+  filter: drop-shadow(0 0 1.7rem rgb(255 106 31 / 17%));
+}
+
+.lolo-loader-percent {
+  letter-spacing: -0.025em;
+  font-variant-numeric: tabular-nums;
+}
+
+.lolo-header {
+  border-color: rgb(243 241 234 / 7%);
+}
+
+.lolo-header[data-scrolled="true"] {
+  border-color: rgb(255 135 69 / 26%);
+  box-shadow: 0 10px 32px rgb(0 0 0 / 24%);
+}
+
+.lolo-nav-links {
+  gap: clamp(1.4rem, 3.4vw, 3.4rem);
+}
+
+.lolo-nav-links a {
+  transition: color 180ms ease;
+}
+
+.lolo-nav-links a::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 4px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--lolo-orange), rgb(255 135 69 / 30%));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms var(--lolo-ease);
+}
+
+.lolo-nav-links a:is(:hover, :focus-visible, [aria-current])::after {
+  transform: scaleX(1);
+}
+
+.lolo-languages {
+  background-color: rgb(243 241 234 / 3%);
+}
+
+.lolo-languages a[aria-current="true"] {
+  box-shadow: inset 0 0 0 1px rgb(255 135 69 / 22%);
+}
+
+a.lolo-cv {
+  color: var(--lolo-foreground);
+  border-color: rgb(255 135 69 / 38%);
+  background: rgb(255 106 31 / 8%);
+}
+
+.lolo-menu-panel {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(255 106 31 / 10%), transparent 55%),
+    var(--lolo-surface);
+}
+
+.lolo-menu-home {
+  border-bottom: 1px solid var(--lolo-line);
+  width: 100%;
+  padding-block: 0.22rem 0.62rem;
+}
+
+.lolo-menu-home[aria-current] {
+  color: var(--lolo-orange-hover);
+}
+
+.lolo-hero {
+  border-bottom: 1px solid var(--lolo-line);
+}
+
+.lolo-stage-meta {
+  align-items: start;
+  min-height: 0;
+  padding: clamp(1.35rem, 3.3vw, 2.65rem) 0 0.5rem;
+}
+
+.lolo-greeting {
+  display: block;
+  color: var(--lolo-foreground);
+  font-size: clamp(1.1rem, 2.35vw, 2.2rem);
+  font-weight: 580;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  text-transform: none;
+}
+
+.lolo-greeting strong {
+  color: var(--lolo-orange-hover);
+  font-weight: 780;
+}
+
+.lolo-location {
+  min-height: 2rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--lolo-line);
+  border-radius: 999px;
+}
+
+.lolo-composition {
+  --name-size: clamp(6.8rem, min(18vw, 28svh), 18rem);
+  --name-top: clamp(0.9rem, 2vw, 1.7rem);
+  height: max(35rem, min(65svh, 48rem));
+}
+
+.lolo-title,
+.lolo-name-outline {
+  inset-inline-end: 14%;
+}
+
+.lolo-aura {
+  background:
+    radial-gradient(
+      ellipse 20% 48% at 46% 63%,
+      rgb(255 106 31 / 22%),
+      transparent 92%
+    ),
+    radial-gradient(
+      ellipse 41% 66% at 44% 67%,
+      #3c1a11 1%,
+      #241312 46%,
+      transparent 95%
+    );
+}
+
+.lolo-portrait {
+  left: 49%;
+  bottom: 0;
+  height: 82%;
+}
+
+.lolo-portrait img {
+  filter: none;
+}
+
+.lolo-portrait-inner {
+  filter: drop-shadow(0 0 1.35rem rgb(255 135 69 / 21%))
+    drop-shadow(0 0.4rem 1.8rem rgb(0 0 0 / 57%));
+}
+
+.lolo-name-outline {
+  clip-path: inset(22% 35% 0 43%);
+}
+
+.lolo-profile-panel {
+  position: absolute;
+  z-index: 5;
+  bottom: clamp(1rem, 5vw, 3.7rem);
+  inset-inline-end: clamp(0rem, 1vw, 1rem);
+  width: clamp(14.7rem, 21vw, 20rem);
+  padding: clamp(0.9rem, 1.7vw, 1.5rem);
+  border: 1px solid rgb(255 135 69 / 30%);
+  border-radius: 0.75rem;
+  background: linear-gradient(155deg, #211610, #131214 56%, #101011);
+  box-shadow: 0 1.25rem 3.25rem rgb(0 0 0 / 32%);
+}
+
+.lolo-profile-panel .lolo-role {
+  max-width: 25ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.5rem);
+}
+
+.lolo-profile-panel .lolo-summary {
+  margin-top: 0.72rem;
+  line-height: 1.6;
+}
+
+.lolo-profile-panel .lolo-support {
+  justify-items: start;
+  margin-top: 0.95rem;
+}
+
+.lolo-socials a {
+  width: 2.85rem;
+  height: 2.85rem;
+  border-color: rgb(243 241 234 / 24%);
+  background: rgb(243 241 234 / 4%);
+}
+
+.lolo-socials img {
+  width: 1.42rem;
+  height: 1.42rem;
+}
+
+.lolo-socials a:hover {
+  box-shadow: 0 0 0.85rem rgb(255 106 31 / 16%);
+}
+
+.lolo-about {
+  scroll-margin-top: var(--lolo-header-height);
+  background:
+    radial-gradient(ellipse at 22% 0%, rgb(255 106 31 / 8%), transparent 53%),
+    var(--lolo-bg);
+}
+
+.lolo-about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  padding-block: clamp(3.3rem, 8vw, 7rem);
+}
+
+.lolo-about-header {
+  border-top: 1px solid rgb(255 135 69 / 50%);
+  padding-top: 1rem;
+}
+
+.lolo-about-header h2 {
+  font: 400 clamp(3.6rem, 8vw, 8rem) / 0.95 var(--lolo-display);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.lolo-about-header > p {
+  max-width: 22ch;
+  margin-top: 0.85rem;
+  font-size: clamp(1.25rem, 2.6vw, 2.25rem);
+  font-weight: 640;
+  line-height: 1.22;
+  letter-spacing: -0.035em;
+}
+
+.lolo-about-content {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.lolo-about-context,
+.lolo-about-project {
+  padding: clamp(1rem, 2.5vw, 1.8rem);
+  border: 1px solid var(--lolo-line-strong);
+  border-radius: 0.7rem;
+  background: linear-gradient(150deg, #1b1717, var(--lolo-surface) 62%);
+}
+
+.lolo-about-facts {
+  color: var(--lolo-orange-hover);
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.lolo-about-facts span {
+  color: var(--lolo-muted);
+}
+
+.lolo-about-bio {
+  margin-block: 0.7rem 1rem;
+  color: var(--lolo-foreground);
+  max-width: 62ch;
+}
+
+.lolo-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.lolo-skills li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.35rem 0.62rem;
+  border: 1px solid var(--lolo-line);
+  border-radius: 999px;
+  color: var(--lolo-muted);
+  font-size: 0.77rem;
+}
+
+.lolo-skills svg,
+.lolo-about-project > svg {
+  color: var(--lolo-orange-hover);
+}
+
+.lolo-about-project {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.35rem 0.7rem;
+}
+.lolo-about-project h3 {
+  font-size: 1rem;
+  font-weight: 720;
+}
+.lolo-about-project p {
+  grid-column: 2;
+  font-size: 0.88rem;
+  color: var(--lolo-muted);
+}
+
+.lolo-certificates {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgb(255 106 31 / 7%), transparent 48%),
+    var(--lolo-surface);
+}
+
+.lolo-certificate {
+  background: linear-gradient(160deg, #171315, #0d0d10 57%);
+  box-shadow: 0 0.8rem 2.8rem rgb(0 0 0 / 22%);
+}
+
+.lolo-certificate-image {
+  aspect-ratio: 1.63;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgb(255 135 69 / 26%);
+  box-shadow:
+    inset 0 0 0 3px #151015,
+    inset 0 0 0 4px rgb(243 241 234 / 8%);
+  background: radial-gradient(
+    ellipse at 48% 76%,
+    #40251d 1%,
+    #20191b 75%,
+    #151214
+  );
+}
+
+.lolo-certificate-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    112deg,
+    transparent 33%,
+    rgb(255 178 129 / 16%) 50%,
+    transparent 64%
+  );
+  transform: translateX(-100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lolo-certificate:is(:hover, :focus-within) .lolo-certificate-image::after {
+    animation: lolo-frame-sweep 780ms var(--lolo-ease) both;
+  }
+  .lolo-viewer[data-state="closed"] {
+    animation: lolo-viewer-out 150ms ease-in both;
+  }
+  .lolo-viewer-overlay[data-state="open"] {
+    animation: lolo-overlay-in 220ms ease-out both;
+  }
+  .lolo-viewer-overlay[data-state="closed"] {
+    animation: lolo-overlay-in 150ms ease-in reverse both;
+  }
+}
+
+@keyframes lolo-frame-sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes lolo-viewer-out {
+  to {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+}
+@keyframes lolo-overlay-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.lolo-certificate-copy {
+  padding-bottom: clamp(1rem, 2.7vw, 1.9rem);
+}
+
+.lolo-certificate-open {
+  border-color: rgb(255 135 69 / 32%);
+  background: rgb(255 106 31 / 6%);
+}
+
+.lolo-viewer {
+  width: min(64rem, calc(100% - 1.25rem));
+  border-color: rgb(255 135 69 / 36%);
+  background: linear-gradient(145deg, #201719, var(--lolo-surface) 44%);
+}
+
+.lolo-viewer-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--lolo-line);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.lolo-viewer-image {
+  max-height: 66dvh;
+}
+
+.lolo-viewer-image img {
+  max-height: 65dvh;
+}
+
+.lolo-footer {
+  position: relative;
+  border-top: 1px solid rgb(255 135 69 / 28%);
+  background:
+    radial-gradient(ellipse at 10% 100%, #251512, transparent 60%),
+    var(--lolo-bg);
+}
+
+.lolo-footer-inner {
+  padding-top: clamp(2.2rem, 5.6vw, 4.8rem);
+}
+
+.lolo-footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  padding-bottom: clamp(1.8rem, 4.5vw, 3.75rem);
+}
+
+.lolo-footer-brand > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.lolo-footer-brand h2 {
+  margin-top: 0.45rem;
+  font: 400 clamp(2.5rem, 6vw, 5rem) / 0.98 var(--lolo-display);
+  text-transform: uppercase;
+}
+
+.lolo-footer-brand p {
+  margin-top: 0.65rem;
+  color: var(--lolo-muted);
+}
+
+.lolo-footer-contact h3 {
+  color: var(--lolo-orange-hover);
+  font-weight: 720;
+  margin-bottom: 0.15rem;
+}
+
+.lolo-contact-lines {
+  display: grid;
+  margin-bottom: 0.55rem;
+}
+
+.lolo-contact-lines a,
+.lolo-footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 2.75rem;
+}
+
+.lolo-contact-lines a:hover,
+.lolo-footer-bottom a:hover {
+  color: var(--lolo-orange-hover);
+}
+
+.lolo-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.38rem 1.25rem;
+  border-top: 1px solid var(--lolo-line);
+  padding-block: 0.75rem;
+  color: var(--lolo-muted);
+  font-size: 0.79rem;
+}
+
+.lolo-footer-bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.2rem;
+}
+
+@media (max-width: 59.99rem) {
+  .lolo-composition {
+    --name-size: clamp(4rem, 20.3vw, 11rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-top: clamp(23rem, 61svh, 38rem);
+    padding-bottom: 1.2rem;
+  }
+  .lolo-title,
+  .lolo-name-outline {
+    inset-inline-end: 0;
+  }
+  .lolo-title {
+    z-index: 2;
+  }
+  .lolo-aura {
+    inset: 0 0 auto;
+    height: clamp(23rem, 61svh, 38rem);
+  }
+  .lolo-portrait {
+    left: 50%;
+    top: clamp(8.2rem, 22vw, 12rem);
+    bottom: auto;
+    height: clamp(12rem, calc(59svh - 9rem), 24rem);
+  }
+  .lolo-profile-panel {
+    position: relative;
+    inset: auto;
+    width: min(100%, 38rem);
+  }
+  .lolo-profile-panel .lolo-support {
+    flex-wrap: wrap;
+  }
+  .lolo-hero[data-has-portrait="false"] .lolo-composition {
+    height: auto;
+    padding-top: clamp(10rem, 39vw, 20rem);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .lolo-stage-meta {
+    gap: 0.46rem;
+  }
+  .lolo-greeting {
+    font-size: clamp(1.1rem, 5.3vw, 2rem);
+  }
+  .lolo-location {
+    font-size: 0.64rem;
+    gap: 0.24rem;
+    min-height: 1.65rem;
+    padding-inline: 0.42rem;
+  }
+  .lolo-location svg {
+    width: 12px;
+  }
+  .lolo-about-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .lolo-viewer-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 23.99rem) {
+  .lolo-profile-panel .lolo-support {
+    row-gap: 0.72rem;
+  }
+  .lolo-footer-bottom nav {
+    gap: 0 0.75rem;
+  }
+}
+
+@media (min-width: 60rem) and (max-width: 69.99rem) {
+  .lolo-composition {
+    --name-size: clamp(7rem, 16.6vw, 12rem);
+  }
+  .lolo-profile-panel .lolo-socials {
+    gap: 0.28rem;
+  }
+  .lolo-profile-panel .lolo-socials a {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .lolo-about-content {
+      animation: lolo-about-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 38%;
+    }
+  }
+}
+
+@keyframes lolo-about-reveal {
+  from {
+    opacity: 0.82;
+    translate: 0 0.55rem;
+  }
+  to {
+    opacity: 1;
+    translate: none;
+  }
+}

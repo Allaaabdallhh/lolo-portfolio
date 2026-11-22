@@ -1,0 +1,227 @@
+.lolo-skills-section,
+.lolo-projects-section {
+  scroll-margin-top: var(--lolo-header-height);
+  border-top: 1px solid var(--lolo-line);
+}
+.lolo-work-inner {
+  padding-block: clamp(3.5rem, 7vw, 7rem);
+}
+.lolo-work-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem 3rem;
+  margin: 1.4rem 0 clamp(1.45rem, 4vw, 3.5rem);
+}
+.lolo-work-heading h2 {
+  max-width: 15ch;
+  font: 400 clamp(2.25rem, 6.5vw, 6.25rem) / 0.99 var(--lolo-display);
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.lolo-work-heading p {
+  max-width: 30ch;
+  color: var(--lolo-muted);
+}
+.lolo-project-copy h3 {
+  font: 400 clamp(1.5rem, 3.3vw, 3.4rem)/1.06 var(--lolo-display);
+  text-wrap: balance;
+}
+.lolo-project-copy > p:not(.lolo-project-type),
+.lolo-project-dialog-layout p {
+  color: var(--lolo-muted);
+  margin-top: 0.5rem;
+}
+.lolo-project-copy ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.15rem 0;
+  padding: 0;
+  list-style: none;
+}
+.lolo-project-copy li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 0.5rem 0.66rem;
+  border: 1px solid var(--lolo-line);
+  border-radius: 0.25rem;
+  background: #101517;
+  font-size: 0.85rem;
+}
+.lolo-toolbox-bridge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 1px solid currentColor;
+  color: var(--work-accent);
+  font-weight: 700;
+}
+.lolo-project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3.8rem);
+  padding: clamp(0.6rem, 1.75vw, 1.5rem);
+  border: 1px solid var(--lolo-line-strong);
+  border-radius: 0.4rem;
+  background: linear-gradient(135deg, #152029, #111114 65%);
+}
+.lolo-project-art {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid #51697a;
+  border-radius: 0.26rem;
+  background: #101920;
+}
+.lolo-project-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.lolo-project-art figcaption {
+  padding: 0.65rem 0.85rem;
+  color: #d0dce5;
+  border-top: 1px solid #51697a;
+  font-size: 0.78rem;
+}
+.lolo-project-copy {
+  padding: 0.4rem 0.4rem 0.9rem;
+}
+.lolo-project-copy h3 {
+  margin-top: 0.45rem;
+}
+.lolo-project-type {
+  color: var(--work-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+.lolo-project-copy .lolo-cv {
+  width: fit-content;
+}
+.lolo-project-dialog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+.lolo-project-dialog-layout h3 {
+  color: #a9c8e8;
+  font-weight: 700;
+}
+.lolo-project-feature:focus-within {
+  border-color: #aa8352;
+}
+.lolo-greeting strong {
+  color: var(--lolo-orange-hover);
+}
+.lolo-hero .lolo-greeting {
+  font-size: clamp(1.05rem, 2.75vw, 2.55rem);
+  font-weight: 680;
+}
+.lolo-hero .lolo-profile-panel {
+  border-color: rgb(215 175 100 / 42%);
+}
+.lolo-hero .lolo-portrait-inner {
+  filter: drop-shadow(0 0 0.55rem rgb(215 175 100 / 35%))
+    drop-shadow(0 0.55rem 1.4rem rgb(0 0 0 / 60%));
+}
+.lolo-hero .lolo-title-lit .lolo-title-line:last-child::after {
+  background: linear-gradient(
+    90deg,
+    transparent 14%,
+    #d7af64 40%,
+    var(--lolo-orange) 62%,
+    transparent 90%
+  );
+}
+.lolo-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.lolo-timeline {
+  max-width: 25.5rem;
+}
+.lolo-chapter .lolo-chapter-copy {
+  padding: 0.6rem 0.72rem 0.72rem;
+}
+.lolo-chapter-copy h3 {
+  font-size: clamp(1.33rem, 2.6vw, 1.9rem);
+}
+.lolo-chapter-copy .lolo-institution {
+  margin-top: 0.34rem;
+}
+.lolo-education-photo {
+  aspect-ratio: 1.9;
+}
+.lolo-education-photo img {
+  object-fit: cover;
+}
+.lolo-chapter-frame--academy .lolo-education-photo img {
+  object-fit: contain;
+}
+.lolo-education-photo .lolo-photo-expand {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.lolo-timeline-signal {
+  background: #e6b46c;
+}
+
+@media (min-width: 56rem) {
+  .lolo-timeline {
+    max-width: 50rem;
+  }
+  .lolo-chapter:nth-child(n + 2) {
+    margin-top: -8rem;
+  }
+}
+@media (max-width: 47.99rem) {
+  .lolo-project-feature,
+  .lolo-project-dialog-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lolo-project-feature {
+    transition:
+      transform 260ms var(--lolo-ease),
+      border-color 260ms ease;
+  }
+  .lolo-project-feature:hover {
+    transform: translateY(-2px);
+  }
+  @supports (animation-timeline: view()) {
+    .lolo-project-feature > .lolo-project-art img {
+      animation: lolo-project-mask linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+@keyframes lolo-project-mask {
+  from {
+    clip-path: inset(0 10% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.lolo-timeline-trace {
+  position: absolute;
+  inset: 0;
+  transform-origin: top;
+  background: linear-gradient(#d7af64, var(--lolo-orange));
+}
+.lolo-timeline-signal {
+  position: relative;
+}

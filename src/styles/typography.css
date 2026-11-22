@@ -1,0 +1,52 @@
+:root {
+  --type-display-xl: clamp(3.4rem, 7.8vw, 7.6rem);
+  --type-display-lg: clamp(3rem, 6vw, 5.5rem);
+  --type-h1: clamp(2.55rem, 4.5vw, 4.6rem);
+  --type-h2: clamp(2.05rem, 3.5vw, 3.2rem);
+  --type-h3: clamp(1.45rem, 2.4vw, 2rem);
+  --type-body-lg: clamp(1rem, 1.6vw, 1.125rem);
+  --type-body: 1rem;
+  --type-body-sm: 0.875rem;
+  --type-caption: 0.8125rem;
+  --type-label: 0.75rem;
+}
+
+.type-display-xl {
+  font-size: var(--type-display-xl);
+  line-height: 0.84;
+}
+.type-display-lg {
+  font-size: var(--type-display-lg);
+  line-height: 0.92;
+}
+.type-h1 {
+  font-size: var(--type-h1);
+  line-height: 0.97;
+}
+.type-h2 {
+  font-size: var(--type-h2);
+  line-height: 1;
+}
+.type-h3 {
+  font-size: var(--type-h3);
+  line-height: 1.12;
+}
+.type-body-lg {
+  font-size: var(--type-body-lg);
+}
+.type-body-sm {
+  font-size: var(--type-body-sm);
+}
+.type-caption {
+  font-size: var(--type-caption);
+}
+.type-label {
+  font-size: var(--type-label);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+:lang(ar) {
+  font-family: var(--font-plex-arabic), Arial, sans-serif;
+  letter-spacing: normal;
+}

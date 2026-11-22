@@ -1,0 +1,62 @@
+:root {
+  --motion-fast: 180ms;
+  --motion-base: 280ms;
+  --motion-reveal: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.circuit-frame::before,
+.circuit-frame::after {
+  content: "";
+  position: absolute;
+  inline-size: 1rem;
+  block-size: 1rem;
+  pointer-events: none;
+}
+
+.circuit-frame::before {
+  inset-block-start: 0.5rem;
+  inset-inline-start: 0.5rem;
+  border-block-start: 1px solid var(--card-hover);
+  border-inline-start: 1px solid var(--card-hover);
+}
+
+.circuit-frame::after {
+  inset-block-end: 0.5rem;
+  inset-inline-end: 0.5rem;
+  border-block-end: 1px solid var(--card-hover);
+  border-inline-end: 1px solid var(--card-hover);
+}
+
+.glow-border {
+  transition:
+    border-color var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out);
+}
+
+.glow-border:is(:hover, :focus-visible, :focus-within) {
+  border-color: var(--card-hover);
+  box-shadow: 0 0 1.4rem var(--glow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .circuit-trace {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--motion-reveal) var(--ease-out);
+  }
+  [dir="rtl"] .circuit-trace {
+    transform-origin: right;
+  }
+  .circuit-frame:is(:hover, :focus-within) .circuit-trace {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-reveal: 0ms;
+  }
+}

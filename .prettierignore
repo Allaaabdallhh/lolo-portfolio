@@ -1,0 +1,19 @@
+pnpm-lock.yaml
+next-env.d.ts
+.next/
+out/
+certificates/
+playwright-report/
+test-results/
+coverage/
+src/app/fonts/
+
+# Owner-supplied reference briefs
+LOLO_PHASE_01_CODEX_MASTER.md
+LOLO_PHASE_02_CODEX_MASTER.md
+LOLO_PHASE_03_ENHANCED_MASTER.md
+LOLO_PHASE_04_VISUAL_STORY_PACKAGE/
+LOLO_PHASE_05_CINEMATIC_ENHANCEMENT_MASTER.md
+LOLO_THREE_PHASES_MASTER_ROADMAP_AND_CODEX_PROMPTS.md
+public/logos/tech/
+public/logos/stack/

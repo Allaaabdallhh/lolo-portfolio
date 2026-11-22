@@ -1,0 +1,316 @@
+.lolo-navy-hero .lolo-greeting {
+  padding-inline-start: 0.34em;
+  border-inline-start: 2px solid var(--lolo-gold);
+}
+.lolo-navy-hero .lolo-profile-panel {
+  border-radius: 0.4rem;
+}
+.lolo-navy-hero .lolo-profile-panel .lolo-socials a {
+  border-color: var(--lolo-bronze-edge);
+}
+.lolo-navy-hero .lolo-profile-panel .lolo-socials a:is(:hover, :focus-visible) {
+  border-color: var(--lolo-gold);
+}
+.lolo-editorial-about .lolo-biography > p + p {
+  margin-top: 0.75rem;
+}
+.lolo-editorial-about .lolo-editorial-portrait {
+  box-shadow:
+    0 24px 60px #0008,
+    inset 0 0 0 4px #e4b87512;
+}
+.lolo-editorial-about .lolo-about-facts li {
+  border-color: #e4b8752b;
+  background: #181311;
+}
+.lolo-skill-category {
+  --skill-light: var(--lolo-gold);
+  position: relative;
+}
+.lolo-skill-category[data-group="systems"] {
+  --skill-light: #a3d0d3;
+}
+.lolo-skill-category h3 {
+  color: var(--skill-light);
+}
+.lolo-skill-card {
+  background: linear-gradient(155deg, #211a18, #141112 72%);
+}
+.lolo-skill-card summary {
+  min-height: clamp(6.5rem, 10vw, 8.4rem);
+  padding: clamp(0.68rem, 1.5vw, 1.2rem);
+}
+.lolo-skill-card[data-skill="python"],
+.lolo-skill-card[data-skill="arduino"] {
+  background:
+    radial-gradient(ellipse at 80% 0%, #382719, transparent 65%), #171313;
+}
+.lolo-skill-card .lolo-skill-icon {
+  color: var(--skill-light);
+  border-color: color-mix(in srgb, var(--skill-light) 37%, transparent);
+}
+.lolo-skill-card::after {
+  content: "";
+  position: absolute;
+  inset: 0.4rem;
+  pointer-events: none;
+  border-radius: 0.2rem;
+  border-top: 1px solid transparent;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      var(--skill-light),
+      transparent
+    )
+    top / 35% 1px no-repeat;
+  background-position-x: -60%;
+  opacity: 0;
+}
+.lolo-skill-card:is(:hover, :focus-within)::after {
+  opacity: 0.85;
+}
+
+.lolo-projects-signature .lolo-project-feature {
+  grid-template-columns: minmax(0, 1.54fr) minmax(0, 1fr);
+  gap: clamp(0.75rem, 3.4vw, 3.3rem);
+}
+.lolo-projects-signature .lolo-project-art {
+  padding: 0.36rem;
+  background: #171411;
+  box-shadow: inset 0 0 0 1px #e4b87535;
+}
+.lolo-projects-signature .lolo-project-art figcaption {
+  padding-inline: 0.54rem;
+}
+
+.lolo-graduation-section {
+  scroll-margin-top: var(--lolo-header-height);
+  border-block: 1px solid var(--lolo-line);
+  background:
+    radial-gradient(ellipse at 58% 54%, #251710, transparent 72%),
+    var(--lolo-bg);
+}
+.lolo-graduation-inner {
+  padding-block: clamp(3rem, 7vw, 7rem);
+}
+.lolo-graduation-feature {
+  margin-top: clamp(1.4rem, 3vw, 2.8rem);
+  overflow: clip;
+  padding: clamp(1rem, 3.6vw, 3.2rem);
+  border-radius: 0.4rem;
+  border: 1px solid var(--lolo-bronze-edge);
+  background:
+    radial-gradient(ellipse at 81% 10%, #3c2516, transparent 65%), #140f11;
+  box-shadow:
+    0 24px 78px #0009,
+    inset 0 0 0 5px #e4b87510;
+}
+.lolo-graduation-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(0.65rem, 3vw, 2rem);
+  align-items: end;
+  margin-bottom: clamp(1rem, 4vw, 3rem);
+}
+.lolo-graduation-label,
+.lolo-graduation-node {
+  color: var(--lolo-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.lolo-graduation-main h2 {
+  margin: 0.6rem 0 0.9rem;
+  max-width: 10ch;
+  font: 400 clamp(2.3rem, 7.6vw, 7.3rem) / 0.96 var(--lolo-display);
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.lolo-graduation-summary,
+.lolo-graduation-end p {
+  max-width: 48ch;
+  color: #d6c5b6;
+  line-height: 1.55;
+}
+.lolo-graduation-year {
+  font: 400 clamp(5rem, 17vw, 16rem) / 0.87 var(--lolo-display);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--lolo-gold);
+  letter-spacing: -0.035em;
+  text-shadow: 0 0 40px #e4b87536;
+}
+.lolo-graduation-path {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+.lolo-graduation-path > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.43rem;
+  min-width: 0;
+  padding: 0.45rem 0.45rem 0.7rem;
+  border: 1px solid var(--lolo-bronze-edge);
+  border-radius: 0.25rem;
+  background: #1a1515;
+}
+.lolo-graduation-path h3 {
+  font-size: clamp(0.78rem, 1.45vw, 1.02rem);
+  font-weight: 690;
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+}
+.lolo-graduation-path-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #1d1714;
+}
+.lolo-graduation-path-visual img {
+  object-fit: cover;
+}
+.lolo-graduation-path > li:nth-child(3) img {
+  object-position: center 59%;
+}
+.lolo-graduation-path > li[data-final="true"] .lolo-graduation-path-visual {
+  background: linear-gradient(135deg, #3d2517, #221415);
+  border: 1px solid var(--lolo-bronze-edge);
+}
+.lolo-graduation-end-year {
+  color: var(--lolo-gold);
+  font: 400 clamp(1.65rem, 5vw, 4.4rem) / 1 var(--lolo-display);
+}
+.lolo-graduation-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-top: clamp(1.2rem, 3.4vw, 2.25rem);
+}
+.lolo-graduation-end .lolo-story-cta {
+  min-height: 44px;
+}
+
+.lolo-built-stack .lolo-stack-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+.lolo-built-stack .lolo-stack-heading h3 {
+  margin: 0;
+}
+.lolo-stack-pause {
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 99px;
+  color: var(--lolo-gold);
+  border: 1px solid var(--lolo-bronze-edge);
+  cursor: pointer;
+}
+.lolo-built-stack .lolo-stack-repeat {
+  display: none;
+}
+.lolo-stack-window {
+  border-block: 1px solid var(--lolo-bronze-edge);
+}
+.lolo-stack-window ul {
+  border: none;
+}
+
+@media (max-width: 56rem) {
+  .lolo-graduation-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lolo-graduation-year {
+    grid-row: 1;
+    font-size: clamp(4.5rem, 17vw, 9rem);
+  }
+}
+@media (max-width: 47.99rem) {
+  .lolo-projects-signature .lolo-project-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lolo-graduation-path {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lolo-skill-card:is(:hover, :focus-within)::after {
+    animation: lolo-card-edge-pass 650ms ease-out both;
+  }
+  @supports (animation-timeline: view()) {
+    .lolo-graduation-feature,
+    .lolo-footer-endframe .lolo-signature-mark img {
+      animation: lolo-feature-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 66%;
+    }
+  }
+}
+@media (min-width: 64rem) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .lolo-projects-signature .lolo-project-feature:hover {
+    transform: perspective(1050px) rotateX(var(--project-tilt-x, 0deg))
+      rotateY(var(--project-tilt-y, 0deg)) translateY(-2px);
+  }
+}
+@media (min-width: 64rem) and (prefers-reduced-motion: no-preference) {
+  .lolo-stack-pause {
+    display: inline-grid;
+  }
+  .lolo-stack-window {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 7% 93%, transparent);
+  }
+  .lolo-stack-track {
+    display: flex;
+    width: max-content;
+    min-width: 200%;
+    animation: lolo-stack-loop 30s linear infinite;
+  }
+  .lolo-built-stack .lolo-stack-track ul {
+    flex: 1 0 50%;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-inline: 1.6rem;
+  }
+  .lolo-built-stack .lolo-stack-repeat {
+    display: flex;
+  }
+  .lolo-built-stack[data-paused="true"] .lolo-stack-track,
+  .lolo-built-stack:hover .lolo-stack-track {
+    animation-play-state: paused;
+  }
+}
+@keyframes lolo-card-edge-pass {
+  from {
+    background-position-x: -60%;
+  }
+  to {
+    background-position-x: 155%;
+    opacity: 0;
+  }
+}
+@keyframes lolo-feature-reveal {
+  from {
+    clip-path: inset(0 0 9%);
+    opacity: 0.78;
+  }
+  to {
+    clip-path: inset(0);
+    opacity: 1;
+  }
+}
+@keyframes lolo-stack-loop {
+  to {
+    transform: translateX(-50%);
+  }
+}
